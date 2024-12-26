@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Login and Signup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Login Form -->
+    <div class="form-container" id="loginFormContainer">
+      <h2>Login</h2>
+      <form id="loginForm" action="#" method="POST">
+        <input type="email" name="email" id="loginEmail" placeholder="Email" required>
+        <div class="password-container">
+          <input type="password" name="password" id="loginPassword" placeholder="Password" required>
+          <span class="toggle-password" onclick="togglePassword('loginPassword')">👁️</span>
+        </div>
+        <a href="#" class="forgot-link">Forgot password?</a>
+        <button type="submit" class="btn">Login</button>
+        <p>Don't have an account? <a href="#" onclick="showSignup()">Signup</a></p>
+      </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="form-container hidden" id="signupFormContainer">
+      <h2>Signup</h2>
+      <form id="signupForm" action="#" method="POST">
+        <input type="email" name="email" id="signupEmail" placeholder="Email" required>
+        <div class="password-container">
+          <input type="password" name="password" id="signupPassword" placeholder="Create password" required>
+          <span class="toggle-password" onclick="togglePassword('signupPassword')">👁️</span>
+        </div>
+        <div class="password-container">
+          <input type="password" name="confirm_password" id="confirmPassword" placeholder="Confirm password" required>
+          <span class="toggle-password" onclick="togglePassword('confirmPassword')">👁️</span>
+        </div>
+        <button type="submit" class="btn">Signup</button>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
